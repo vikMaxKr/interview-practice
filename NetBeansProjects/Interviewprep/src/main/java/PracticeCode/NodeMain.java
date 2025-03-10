@@ -9,10 +9,10 @@ package PracticeCode;
  * @author vikashkumar
  */
 
-class Node{
+class Node1{
     int data;
     Node next;
-    Node(int data)
+    Node1(int data)
     {
         this.data=data;
     }

@@ -1,0 +1,17 @@
+{
+  "_id": "123",
+  "ipLfcycStat": {
+    "doNotCombineStat": {
+      "doNotCombineStatMaint": [
+        {
+          "actn": "ADD",
+          "ipKey": {
+            "ecIpKey": {
+              "ecIpId": 123456
+            }
+          }
+        }
+      ]
+    }
+  }
+}

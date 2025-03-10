@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ExternalStorageConfigurationManager" enabled="true" />
+  <component name="MavenProjectsManager">
+    <option name="originalFiles">
+      <list>
+        <option value="$PROJECT_DIR$/DynamicP/pom.xml" />
+        <option value="$PROJECT_DIR$/AuthWebapp/pom.xml" />
+        <option value="$PROJECT_DIR$/springMvc1/pom.xml" />
+        <option value="$PROJECT_DIR$/Interviewprep/pom.xml" />
+        <option value="$PROJECT_DIR$/java8features/pom.xml" />
+        <option value="$PROJECT_DIR$/DataStructure1/pom.xml" />
+        <option value="$PROJECT_DIR$/Vikash-practice/pom.xml" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" project-jdk-name="18 (2)" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/out" />
+  </component>
+</project>

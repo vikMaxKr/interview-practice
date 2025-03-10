@@ -1,0 +1,2 @@
+Adaptive: sorting on already sorted elements.- takes min time.
+Stable:- sorting algo preserves the order of duplicate elements in sorted list.

@@ -1,0 +1,111 @@
+1. -----------------To sort ArrayList<ArrayList<Integer>>-------
+ArrayList <ArrayList <Integer>> subsets = new ArrayList<>();
+ a) Method 1:-
+  subsets.sort((l1,l2)->{
+           String s1=l1.toString();
+           String s2=l2.toString();
+           return s1.compareTo(s2);
+       });
+
+  b) Method 2:-
+  subsets.sort((list1, list2) -> {
+              int size1 = list1.size();
+              int size2 = list2.size();
+              for (int i = 0; i < Math.min(size1, size2); i++) {
+                  int cmp = Integer.compare(list1.get(i), list2.get(i));
+                  if (cmp != 0) {
+                      return cmp;
+                  }
+              }
+              return Integer.compare(size1, size2);
+          });
+
+  c) Method 2 :- reverse
+
+  subsets.sort((list1, list2) -> {
+                int size1 = list1.size();
+                int size2 = list2.size();
+                for (int i = 0; i < Math.min(size1, size2); i++) {
+                    int cmp = Integer.compare(list2.get(i), list1.get(i));
+                    if (cmp != 0) {
+                        return cmp;
+                    }
+                }
+                return Integer.compare(size2, size1);
+            });
+
+
+//use priorityQueue as max-heap
+PriorityQueue pq=new PriorityQueue<>(Collections.reverseOrder());
+
+//Iterate two map together
+Iterator<Map.Entry<Character, Integer>> iterator1 = map1.entrySet().iterator();
+Iterator<Map.Entry<Character, Integer>> iterator2 = map2.entrySet().iterator();
+
+    while (iterator1.hasNext() && iterator2.hasNext()) {
+        Map.Entry<String, String> entry1 = iterator1.next();
+        Map.Entry<String, String> entry2 = iterator2.next();
+
+    
+    }
+
+
+     int[][] intervals = new int[][]{{1, 3}, {2, 6}, {8, 10}, {15, 18}};
+
+     // Sort the array based on the first element of each sub-array
+     Arrays.sort(intervals, (a, b) -> Integer.compare(a[0], b[0]));
+
+
+
+       Arrays.sort(intervals, new Comparator<int[]>() {
+                 @Override
+                 public int compare(int[] a, int[] b) {
+                     // Compare the first element of each row for sorting
+                     return Integer.compare(a[0], b[0]);
+                 }
+             });
+
+
+             //SWAP LIST
+
+              public  void swap(List<Integer> list, int i, int j) {
+                     // Swap the elements without using extra space
+                     if (i != j) {
+                         list.set(i, list.get(i) + list.get(j));  // Step 1: list[i] = list[i] + list[j]
+                         list.set(j, list.get(i) - list.get(j));  // Step 2: list[j] = list[i] - list[j]
+                         list.set(i, list.get(i) - list.get(j));  // Step 3: list[i] = list[i] - list[j]
+                     }
+
+     List<int[]> listOfIntArrays = Arrays.asList(new int[]{1, 2}, new int[]{3, 4});
+     List<List<Integer>> listOfLists = listOfIntArrays.stream()
+         .map(arr ->
+         Arrays.stream(arr).boxed().collect(Collectors.toList()))
+         .collect(Collectors.toList());  // Collect as List<List<Integer>>
+
+
+     int[] arr = new int[]{1, 2, 3};
+     List<Integer> list = IntStream.of(arr)  // Convert the int array to IntStream
+                                   .boxed()  // Convert int to Integer
+                                   .collect(Collectors.toList());  // Collect into a List
+
+
+     ----------------------------------------------
+     To split string on spaces use \\s+
+
+
+String[] arr=new String[]{"54", "546", "548", "60"}
+Arrays.sort(arr,(a,b)->{
+            String ab=a+b;
+            String ba=b+a;
+           return  ab.compareTo(ba)>0?-1:1;
+        });
+
+This  does not work with integer array.
+
+--------------------MAP-----------------
+https://www.geeksforgeeks.org/hashmap-computeifabsent-method-in-java-with-examples/
+map.computeIfAbsent(level,k-> new ArrayList<Integer>()).add(data);
+
+Iterate over map
+List<Map.Entry<>> list=new ArrayList<>(map.entrySet());
+

@@ -1,0 +1,11 @@
+{
+  "result": "FATAL",
+  "source": "mongo-transaction",
+  "errorDetails": [
+    {
+      "code": "ODC1000",
+      "description": "BAD_REQUEST",
+      "messageDetails": "Invalid AccountType"
+    }
+  ]
+}

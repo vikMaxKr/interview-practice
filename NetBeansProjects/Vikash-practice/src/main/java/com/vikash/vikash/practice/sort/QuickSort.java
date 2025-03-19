@@ -52,6 +52,4 @@ public class QuickSort {
             quickSort(arr, pi + 1, high);
         }
     }
-
-
 }

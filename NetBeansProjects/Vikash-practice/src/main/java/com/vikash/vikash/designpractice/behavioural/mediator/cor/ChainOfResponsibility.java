@@ -1,6 +1,4 @@
-package com.vikash.vikash.practice.javaconcepts.cor;
-
-import java.util.logging.Level;
+package com.vikash.vikash.designpractice.behavioural.mediator.cor;
 
 public class ChainOfResponsibility {
 

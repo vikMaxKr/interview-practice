@@ -22,11 +22,8 @@ public class HashSetTest {
         set.add(book1);
         set.add(book);
 
-        Iterator<Book> it=set.iterator();
-
-        while(it.hasNext())
-        {
-            System.out.println(it.next());
+        for (Book value : set) {
+            System.out.println(value);
         }
     }
 }

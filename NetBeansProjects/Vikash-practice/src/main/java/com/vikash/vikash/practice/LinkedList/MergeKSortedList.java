@@ -1,19 +1,9 @@
 package com.vikash.vikash.practice.LinkedList;
-
+/*
+You are given an array of k linked-lists lists, each linked-list is sorted in ascending order.
+Merge all the linked-lists into one sorted linked-list and return it.
+ */
 public class MergeKSortedList {
-
-    public ListNode mergeTwoLists(ListNode l1, ListNode l2) {
-        if (l1 == null) return l2;
-        if (l2 == null) return l1;
-
-        if (l1.val < l2.val) {
-            l1.next = mergeTwoLists(l1.next, l2);
-            return l1;
-        } else {
-            l2.next = mergeTwoLists(l1, l2.next);
-            return l2;
-        }
-    }
 
     public ListNode mergeKLists(ListNode[] lists) {
         if (lists.length == 0) return null;
@@ -27,6 +17,19 @@ public class MergeKSortedList {
         ListNode l1 = divideAndConquer(lists, left, mid);
         ListNode l2 = divideAndConquer(lists, mid + 1, right);
         return mergeTwoLists(l1, l2);
+    }
+
+    public ListNode mergeTwoLists(ListNode l1, ListNode l2) {
+        if (l1 == null) return l2;
+        if (l2 == null) return l1;
+
+        if (l1.val < l2.val) {
+            l1.next = mergeTwoLists(l1.next, l2);
+            return l1;
+        } else {
+            l2.next = mergeTwoLists(l1, l2.next);
+            return l2;
+        }
     }
 
     public static void main(String[] args)

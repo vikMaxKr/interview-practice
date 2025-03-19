@@ -10,28 +10,23 @@ public class BlockingQueueTest {
     public static void main(String[] args) {
 
         Thread producer= new Thread(()->{
-
-            for(int i=0;i<=10;i++)
+            for(int i=0; i<=10; i++)
             {
                 try {
                     System.out.println("producing---"+i);
                     blockingQueue.put(i);
-
                 } catch (InterruptedException e) {
-
                     throw new RuntimeException(e);
                 }
             }
         });
 
         Thread consumer=new Thread(()->{
-
-            for(int i=0;i<=10;i++)
+            for(int i=0; i<=10; i++)
             {
                 try{
                     int take=blockingQueue.take();
                     System.out.println("consuming--"+take);
-
                 }catch (InterruptedException e)
                 {
                     throw new RuntimeException(e);

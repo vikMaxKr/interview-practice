@@ -7,10 +7,33 @@ package com.vikash.vikash.practice.LinkedList;
 
 // Function to split the singly linked list into two halves
 public class MergeSort{
+
+    // Function to perform merge sort on a singly linked list
+    static Node mergeSort(Node head) {
+
+        // Base case: if the list is empty or has only one node,
+        // it's already sorted
+        if (head == null || head.next == null) {
+            return head;
+        }
+
+        // Split the list into two halves
+        Node second = split(head);
+
+        // Recursively sort each half
+        head = mergeSort(head);
+        second = mergeSort(second);
+
+        // Merge the two sorted halves
+        return merge(head, second);
+    }
+
+
     static Node split(Node head) {
         Node fast = head;
         Node slow = head;
 
+        //To split the linked list into two halves, we need to find the middle of the linked list.
         // Move fast pointer two steps and slow pointer
         // one step until fast reaches the end
         while (fast != null && fast.next != null) {
@@ -47,26 +70,6 @@ public class MergeSort{
             second.next = merge(first, second.next);
             return second;
         }
-    }
-
-    // Function to perform merge sort on a singly linked list
-    static Node mergeSort(Node head) {
-
-        // Base case: if the list is empty or has only one node,
-        // it's already sorted
-        if (head == null || head.next == null) {
-            return head;
-        }
-
-        // Split the list into two halves
-        Node second = split(head);
-
-        // Recursively sort each half
-        head = mergeSort(head);
-        second = mergeSort(second);
-
-        // Merge the two sorted halves
-        return merge(head, second);
     }
 
     static void printList(Node head) {

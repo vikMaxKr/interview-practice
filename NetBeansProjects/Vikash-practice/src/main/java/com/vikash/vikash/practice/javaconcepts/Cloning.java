@@ -41,9 +41,6 @@ public class Cloning implements Cloneable{
         return deepClone;
     }
 
-
-
-
 }
 
 class Demo implements Cloneable{

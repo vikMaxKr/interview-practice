@@ -1,4 +1,4 @@
-package com.vikash.vikash.practice.javaconcepts.cor;
+package com.vikash.vikash.designpractice.behavioural.mediator.cor;
 
 public abstract class Logger {
 
